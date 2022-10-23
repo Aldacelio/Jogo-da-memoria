@@ -22,4 +22,3 @@ const handleSubmit = (event) =>{
 jogador1.addEventListener('input', validateInput);
 jogador2.addEventListener('input', validateInput);
 form.addEventListener('submit', handleSubmit);
-
