@@ -16,7 +16,7 @@ const handleSubmit = (event) =>{
     localStorage.setItem('Jogador1', jogador1.value);
     localStorage.setItem('Jogador2', jogador2.value);
 
-    window.location = 'Pages/jogoMemoria.html';
+    window.location = './Pages/jogoMemoria.html';
 }
 
 jogador1.addEventListener('input', validateInput);
