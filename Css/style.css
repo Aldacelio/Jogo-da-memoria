@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -143,8 +145,75 @@ header{
     opacity: 0.5;
 }
 
-.jogador1,
-.jogador2{
+.colorV{
     padding: 10px;
     background-color: rgb(103, 236, 91);
+}
+
+/*fim css jogo*/
+
+/* css parabens*/
+.parabens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../Images/bg.jpg');
+    background-size: cover;
+    flex-direction: column;
+    line-height: 4rem;
+}
+
+.text-parabens {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: rgb(19, 30, 10);
+}
+
+.paragrafo-parabens {
+    font-size: 1rem;
+    color: rgb(19, 30, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.btn{
+    background: #2c944b;
+    background: -webkit-linear-gradient(to right, #2c944b, #239b37);
+    background: linear-gradient(to right, #2c944b, #239b37);
+    color: #eee;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    text-decoration: none;
+    border: none;
+    border-radius: .5rem;
+    width: 15rem;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.btn-parabens:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.btn-revanche:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.paragrafo-parabens img {
+    width: 5rem;
+    margin-left: 0.5rem;
 }

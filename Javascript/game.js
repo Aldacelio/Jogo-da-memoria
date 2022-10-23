@@ -8,6 +8,8 @@ const pontosJogador2 = document.querySelector('.pontosP2');
 const timer = document.querySelector('.timer');
 
 
+
+
 const characters = [
     'beth',
     'jerry',
@@ -35,6 +37,19 @@ let aux = 0;
 let pontos1 = 0;
 let pontos2 = 0;
 
+const parabens = (ganhador,pontosG) =>{
+        
+    if(ganhador == 'Empate'){
+        localStorage.setItem('Resultado', `${ganhador}, joguem novamente e decidam essa disputa.`);
+        localStorage.setItem('Pontuacao', `Cada um fez o total de ${pontosG} pontos`);    
+    }else{
+        localStorage.setItem('Resultado', `Parabéns ${ganhador} você ganhou !!!`);
+        localStorage.setItem('Pontuacao', `Você fez um total de ${pontosG} pontos`);
+    }
+    
+    window.location = 'parabens.html';
+}
+
 const checkEndGame = () =>{
     const disabledCards = document.querySelectorAll('.disabled-card');
     if(disabledCards.length == 20){
@@ -42,30 +57,30 @@ const checkEndGame = () =>{
 
         if(pontos1>pontos2){
             setTimeout(()=>{
-                alert(`Parabéns, ${spanJogador1.innerHTML} você ganhou`);
+                parabens(spanJogador1.innerHTML.replace(':', ''), pontosJogador1.innerHTML);
             },500); 
         }else if(pontos2>pontos1){
             setTimeout(()=>{
-                alert(`Parabéns, ${spanJogador2.innerHTML} você ganhou`);
+                parabens(spanJogador2.innerHTML.replace(':', ''), pontosJogador2.innerHTML);
             },500);
         }else{
             setTimeout(() =>{
-                alert('Empate');
+                parabens('Empate','10');
             }, 500);
         }
     }
     
 }
 
-checkVez = () =>{
+const checkVez = () =>{
     if(aux == 0){
         vez = 1;
-        spanJogador1.style.backgroundColor = 'rgb(103, 236, 91)';
-        spanJogador2.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        spanJogador1.classList.add('colorV');
+        spanJogador2.classList.remove('colorV');
     }else{
         vez = 2;
-        spanJogador2.style.backgroundColor = 'rgb(103, 236, 91)';
-        spanJogador1.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        spanJogador2.classList.add('colorV');
+        spanJogador1.classList.remove('colorV');
     }
         
 }
@@ -167,9 +182,9 @@ const startTimer = () =>{
 
 window.onload = () =>{
     
-    checkVez();
     spanJogador1.innerHTML = localStorage.getItem('Jogador1')+':'+pontosJogador1.innerHTML;
     spanJogador2.innerHTML = localStorage.getItem('Jogador2')+':'+pontosJogador2.innerHTML;
+    checkVez();
     startTimer();
     loadGame();
 }
