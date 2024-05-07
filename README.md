@@ -1,6 +1,6 @@
-<h1 align = "center">D_NOTEPAD</h1> 
+<h1 align = "center">Jogo da memória</h1> 
 
-<img src="https://raw.githubusercontent.com/Aldacelio/front-end-D_Notepad/main/src/assets/images/bannerGit.PNG" width="1300px">
+<img src="https://raw.githubusercontent.com/Aldacelio/Jogo-da-memoria/main/Images/banner.png" width="1300px">
 
 ## Tecnologias usadas
 
@@ -20,21 +20,16 @@
 ## Jogo rodando
 <div align="center">
 
-### Tela inicial
+### Jogadores
 
-<img src="https://raw.githubusercontent.com/Aldacelio/front-end-D_Notepad/main/src/assets/images/Mural%20de%20Pensamentos.gif" width="480px">
+<img src="https://raw.githubusercontent.com/Aldacelio/Jogo-da-memoria/main/Images/NomeJogadores.gif" width="580px">
 
-### Criar pensamento
+### Fazendo um ponto
 
-<img src="https://raw.githubusercontent.com/Aldacelio/front-end-D_Notepad/main/src/assets/images/Criar%20Pensamento.gif" width="480px">
+<img src="https://raw.githubusercontent.com/Aldacelio/Jogo-da-memoria/main/Images/JogoFuncionando.gif" width="580px">
 
-### Editar pensamento
+### Vencedor
 
-<img src="https://raw.githubusercontent.com/Aldacelio/front-end-D_Notepad/main/src/assets/images/Editar%20Pensamento.gif" width="480px">
+<img src="https://raw.githubusercontent.com/Aldacelio/Jogo-da-memoria/main/Images/TelaVencedor.gif" width="580px">
 
-### Excluir pensamento
-
-<img src="https://raw.githubusercontent.com/Aldacelio/front-end-D_Notepad/main/src/assets/images/Excluir%20Pensamento.gif" width="480px">
 </div>
-<br>
-<b>Lembrando que essa aplicação em uso não é apenas o front e sim a integração dele com back-end em ASP.NET Core que utiliza o Postgresql como SGBD. Segue o link para o back-end do projeto:</b> https://github.com/Aldacelio/back-end-D_Notepad
